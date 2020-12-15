@@ -1,5 +1,5 @@
 import Document, {Html, Head, Main, NextScript} from 'next/document'
-import {patchSharing} from '@module-federation/nextjs-mf'
+import {pathSharing} from '@module-federation/nextjs-mf'
 
 class MyDocument extends Document {
     static async getInitialProps(ctx) {
@@ -10,10 +10,7 @@ class MyDocument extends Document {
     render(){
         return(
             <Html>
-                {patchSharing()}
-                {/* This is where we're actually allowing app2 to get the code from app2 */}
-                <script src="http://localhost:3000/_next/static/remoteEntryMerged.js" />
-                <script src="http://localhost:3002/_next/static/remoteEntryMerged.js" />
+                {pathSharing()}
                 <Head />
                 <body>
                     <Main />

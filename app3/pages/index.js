@@ -1,12 +1,6 @@
-import Head from 'next/head';
-import styles from '../styles/Home.module.css';
-
-// We need to use top level await on these modules as they are async. 
-// This is actually what let's module federation work with NextJS
-const Nav = (await import('app1/nav')).default;
-const add = (await import('app1/add')).default;
-const multiplyByTwo = (await import('app1/multiplyByTwo')).default;
-const Title = (await import('app3/title')).default;
+import Head from 'next/head'
+import styles from '../styles/Home.module.css'
+import Title from '../components/title'
 
 export default function Home() {
   return (
@@ -17,14 +11,7 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <Nav />
         <Title />
-        <h2>
-          {`Adding 2 and 3 ==>`} {add(2, 3)}
-        </h2>
-        <h2>
-          {`Multiplying 5 by 2  ==>`} {multiplyByTwo(5)}
-        </h2>
         <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
@@ -47,14 +34,16 @@ export default function Home() {
 
           <a
             href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}>
+            className={styles.card}
+          >
             <h3>Examples &rarr;</h3>
             <p>Discover and deploy boilerplate example Next.js projects.</p>
           </a>
 
           <a
             href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}>
+            className={styles.card}
+          >
             <h3>Deploy &rarr;</h3>
             <p>
               Instantly deploy your Next.js site to a public URL with Vercel.
@@ -67,11 +56,12 @@ export default function Home() {
         <a
           href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
           target="_blank"
-          rel="noopener noreferrer">
+          rel="noopener noreferrer"
+        >
           Powered by{' '}
           <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
         </a>
       </footer>
     </div>
-  );
+  )
 }

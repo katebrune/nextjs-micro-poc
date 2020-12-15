@@ -21,7 +21,12 @@ module.exports = {
                 ? path.resolve(
                     __dirname,
                     '../app1/.next/server/static/runtime/remoteEntry.js'
-                ): 'app1'
+                ): 'app1',
+                app3: isServer
+                ? path.resolve(
+                    __dirname,
+                    '../app3/.next/server/static/runtime/remoteEntry.js'
+                ): 'app3'
             },
             exposes: {},
             shared: [],
