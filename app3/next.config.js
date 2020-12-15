@@ -14,7 +14,7 @@ module.exports = {
             filename: 'static/runtime/remoteEntry.js',
             remotes: {},
             exposes: {
-                './title': './components/title'
+                './page2': './components/page2'
             },
             shared: []
         }

@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@module-federation/nextjs-mf": "^0.0.2",
+    "evergreen-ui": "^5.1.2",
     "next": "10.0.3",
     "react": "17.0.1",
     "react-dom": "17.0.1"
