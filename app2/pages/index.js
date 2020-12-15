@@ -3,10 +3,10 @@ import styles from '../styles/Home.module.css';
 
 // We need to use top level await on these modules as they are async. 
 // This is actually what let's module federation work with NextJS
-const Nav = (await import('app1/nav')).default;
+const {Nav} = (await import('app1/nav'));
 const add = (await import('app1/add')).default;
 const multiplyByTwo = (await import('app1/multiplyByTwo')).default;
-const Title = (await import('app3/title')).default;
+const {Title} = (await import('app3/title'));
 
 export default function Home() {
   return (

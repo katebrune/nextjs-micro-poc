@@ -1,6 +1,6 @@
-import * as React from 'react';
+import React, {FunctionComponent} from 'react'
 
-const Nav = () => {
+export const Nav: FunctionComponent = () => {
   return (
     <nav
       style={{
@@ -18,5 +18,3 @@ const Nav = () => {
     </nav>
   );
 };
-
-export default Nav;
